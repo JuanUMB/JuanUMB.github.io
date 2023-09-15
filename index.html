@@ -27,7 +27,7 @@
         .endpoint {
             border: 1px solid #ccc;
             padding: 10px;
-            margin-top: 20px; /* Añadido un margen superior adicional para separar los endpoints */
+            margin-top: 20px;
         }
 
         .code {
@@ -35,7 +35,6 @@
             padding: 10px;
         }
 
-        /* Agregamos estilos para las etiquetas <pre> que contienen código JSON */
         pre {
             white-space: pre-wrap;
             word-break: break-all;
@@ -75,7 +74,66 @@
         </div>
     </div>
 
-    <!-- Repite el mismo formato para los demás endpoints -->
+    <!-- Endpoint 2 -->
+    <div class="endpoint">
+        <h3>2. Agregar un nuevo producto</h3>
+        <p><strong>Ruta:</strong> /products</p>
+        <p><strong>Método HTTP:</strong> POST</p>
+        <p><strong>Descripción:</strong> Permite agregar un nuevo producto a la base de datos.</p>
+        <p><strong>Parámetros del cuerpo (JSON):</strong></p>
+        <div class="code">
+            Ejemplo de solicitud JSON:
+            <pre>
+{
+    "name": "Nuevo Producto",
+    "price": 15.99,
+    "quantity": 20
+}
+            </pre>
+        </div>
+    </div>
+
+    <!-- Endpoint 3 -->
+    <div class="endpoint">
+        <h3>3. Eliminar un producto</h3>
+        <p><strong>Ruta:</strong> /delete/&lt;string:product_name&gt;</p>
+        <p><strong>Método HTTP:</strong> GET</p>
+        <p><strong>Descripción:</strong> Permite eliminar un producto de la base de datos.</p>
+        <p><strong>Parámetros de la URL:</strong></p>
+        <div class="code">
+            Ejemplo de solicitud URL:
+            <pre>
+/delete/Producto1
+            </pre>
+        </div>
+    </div>
+
+    <!-- Endpoint 4 -->
+    <div class="endpoint">
+        <h3>4. Editar un producto existente</h3>
+        <p><strong>Ruta:</strong> /edit/&lt;string:product_name&gt;</p>
+        <p><strong>Método HTTP:</strong> POST</p>
+        <p><strong>Descripción:</strong> Permite editar un producto existente en la base de datos.</p>
+        <p><strong>Parámetros de la URL:</strong></p>
+        <div class="code">
+            Ejemplo de solicitud URL:
+            <pre>
+/edit/Producto1
+            </pre>
+        </div>
+        <p><strong>Parámetros del cuerpo (JSON):</strong></p>
+        <div class="code">
+            Ejemplo de solicitud JSON:
+            <pre>
+{
+    "name": "Producto Actualizado",
+    "price": 17.99,
+    "quantity": 25
+}
+            </pre>
+        </div>
+    </div>
+
 
     <h2>Librerías Utilizadas</h2>
     <ul>
@@ -85,3 +143,4 @@
     </ul>
 </body>
 </html>
+
