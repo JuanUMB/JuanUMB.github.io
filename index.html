@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .endpoint {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .code {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Documentación de la API de Productos</h1>
+
+    <h2>Descripción General</h2>
+    <p>Esta API permite gestionar productos, incluyendo la creación, actualización y eliminación de productos en una base de datos MongoDB. Utiliza el framework Flask para crear un servidor web que ofrece una interfaz para interactuar con los productos.</p>
+
+    <h2>Endpoints</h2>
+
+    <div class="endpoint">
+        <h3>1. Obtener la lista de productos</h3>
+        <p><strong>Ruta:</strong> /</p>
+        <p><strong>Método HTTP:</strong> GET</p>
+        <p><strong>Descripción:</strong> Esta ruta muestra una lista de productos almacenados en la base de datos.</p>
+        <div class="code">
+            Ejemplo de respuesta:
+            <pre>
+[
+    {
+        "name": "Producto 1",
+        "price": 10.99,
+        "quantity": 50
+    },
+    {
+        "name": "Producto 2",
+        "price": 19.99,
+        "quantity": 30
+    }
+]
+            </pre>
+        </div>
+    </div>
+
+    <!-- Repite el mismo formato para los demás endpoints -->
+
+    <h2>Librerías Utilizadas</h2>
+    <ul>
+        <li>Flask: Flask es un framework web de Python utilizado para crear aplicaciones web.</li>
+        <li>pymongo: La biblioteca pymongo se utiliza para interactuar con la base de datos MongoDB.</li>
+        <li>certifi: Certifi es una biblioteca utilizada para la gestión de certificados de seguridad.</li>
+    </ul>
+</body>
+</html>
